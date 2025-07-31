@@ -12,7 +12,7 @@ This tool takes the standard 10-meter Blue, Green, Red, and Near-Infrared (NIR) 
 ## TL;DR (For the Impatient)
 
 1.  **Install stuff**: `pip install pyqt5 torch safetensors rasterio pillow numpy`
-2.  **Get the Model**: Download the `REC_Real_L1B.safetensors` file (you'll need to find this from the original project or a trusted source).
+2.  **Get the Model**: Download the `REC_Real_L1B.safetensors` file from [Releases](https://github.com/Topping1/L1BSR-GUI/releases/download/alpha1/REC_Real_L1B.safetensors).
 3.  **Run the App**: `python l1bsr_sr_gui_updated.py`
 4.  **Load Data**: Select the model file and your four Sentinel-2 band files (B02, B03, B04, B08).
 5.  **Process**: Click the "Process" button.

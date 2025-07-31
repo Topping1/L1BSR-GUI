@@ -13,7 +13,15 @@ This tool takes the standard 10-meter Blue, Green, Red, and Near-Infrared (NIR) 
 1.  **Install stuff**: `pip install pyqt5 torch safetensors rasterio pillow numpy`
 2.  **Get the Model**: Download the `REC_Real_L1B.safetensors` file from [Releases](https://github.com/Topping1/L1BSR-GUI/releases/download/alpha1/REC_Real_L1B.safetensors).
 3.  **Run the App**: `python l1bsr_sr_gui_updated.py`
-4.  **Load Data**: Select the model file and your four Sentinel-2 band files (B02, B03, B04, B08).
+4.  **Load Data**: Select the model file and your four Sentinel-2 band files (B02, B03, B04, B08). The app is meant to be used for Sentinel-2 data downloaded from [Copernicus Browser](https://browser.dataspace.copernicus.eu/). The band files requirements are:
+   - Image format: TIFF (16-bit)
+   - Image resolution: HIGH
+   - Coordinate system: UTM (not tested on other systems available in Copernicus Browser but they might work)
+   - Layers (Raw): B02, B03, B04, B08.
+   - Layers (Visualised): True color (optional). 
+
+![Copernicus browser](Copernicus.png)
+
 5.  **Process**: Click the "Process" button.
 6.  **Save**: Save your beautiful new high-resolution image as a GeoTIFF or a JPG.
 

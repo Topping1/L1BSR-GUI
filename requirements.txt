@@ -1,0 +1,6 @@
+numpy
+torch
+safetensors
+PyQt5
+rasterio
+Pillow

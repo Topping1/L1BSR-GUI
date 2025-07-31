@@ -49,6 +49,14 @@ pip install pyqt5 torch safetensors rasterio pillow numpy
 ```
 **For GPU Acceleration (Optional but Recommended)**: If you have an NVIDIA graphics card, make sure you install a version of PyTorch that supports CUDA. This will make the processing significantly faster.
 
+### Onnx inference
+
+Included in this repository is an app variant that uses OnnxRuntime for inference (L1-BSR-GUI-ONNX.py). The user interface is the same but the model file used in this model is a Onnx file that can be found in the [Releases](https://github.com/Topping1/L1BSR-GUI/releases/download/alpha1/rcan_model.onnx).
+Onnx inference requires a similar but reduced set of python libraries:
+```
+pip install onnxruntime pyqt5 numpy pillow rasterio
+```
+
 ## How to Use
 
 1.  **Place the Model File**: For convenience, create a folder named `trained_models` in the same directory as the script and place the `REC_Real_L1B.safetensors` file inside it. The app will find it automatically on startup.

@@ -12,10 +12,10 @@ This tool takes the standard 10-meter Blue, Green, Red, and Near-Infrared (NIR) 
 
 1.  **Install stuff**: `pip install pyqt5 torch safetensors rasterio pillow numpy`
 2.  **Get the Model**: Download the `REC_Real_L1B.safetensors` file from [Releases](https://github.com/Topping1/L1BSR-GUI/releases/download/alpha1/REC_Real_L1B.safetensors).
-3.  **Run the App**: `python l1bsr_sr_gui_updated.py`
+3.  **Run the App**: `python L1BSR-GUI.py`
 4.  **Load Data**: Select the model file and your four Sentinel-2 band files (B02, B03, B04, B08). The app is meant to be used for Sentinel-2 data downloaded from [Copernicus Browser](https://browser.dataspace.copernicus.eu/). The band files requirements are:
    - Image format: TIFF (16-bit)
-   - Image resolution: HIGH
+   - Image resolution: HIGH (original code asked for band files with less than 500px x 500px resolution but larger resolutions work, albeit slowly)
    - Coordinate system: UTM (not tested on other systems available in Copernicus Browser but they might work)
    - Layers (Raw): B02, B03, B04, B08.
    - Layers (Visualised): True color (optional). 
@@ -23,7 +23,7 @@ This tool takes the standard 10-meter Blue, Green, Red, and Near-Infrared (NIR) 
 ![Copernicus browser](Copernicus.png)
 
 5.  **Process**: Click the "Process" button.
-6.  **Save**: Save your beautiful new high-resolution image as a GeoTIFF or a JPG.
+6.  **Save**: Save your new high-resolution image as a GeoTIFF or a JPG.
 
 ***
 
@@ -62,7 +62,7 @@ pip install onnxruntime pyqt5 numpy pillow rasterio
 1.  **Place the Model File**: For convenience, create a folder named `trained_models` in the same directory as the script and place the `REC_Real_L1B.safetensors` file inside it. The app will find it automatically on startup.
     ```
     - your_project_folder/
-      |- l1bsr_sr_gui_updated.py  (this script)
+      |- L1BSR-GUI.py  (this script)
       |- trained_models/
          |- REC_Real_L1B.safetensors
     ```
@@ -70,7 +70,7 @@ pip install onnxruntime pyqt5 numpy pillow rasterio
 
 2.  **Launch the Application**: Run the script from your terminal:
     ```bash
-    python l1bsr_sr_gui_updated.py
+    python L1BSR-GUI.py
     ```
 
 3.  **Select Input Bands**: Click the "Select B02...", "Select B03...", etc., buttons to load your four input GeoTIFF files. A small preview of each band will appear. The files must have the same dimensions and geographic projection.
@@ -79,10 +79,10 @@ pip install onnxruntime pyqt5 numpy pillow rasterio
 
 5.  **Preview and Sharpen**:
     *   Click and hold the mouse on the output image to compare it with the original.
-    *   To make the image look sharper, check the "Sharpen" box and adjust the slider. This only affects the preview and the final JPG, not the scientific GeoTIFF data.
+    *   To make the image look sharper, check the "Sharpen" box and adjust the slider. This only affects the preview and the final JPG, not the GeoTIFF file.
 
 6.  **Save Your Output**:
-    *   Click **"Save as GeoTIFF..."** to save the pure, 4-band scientific data.
+    *   Click **"Save as GeoTIFF..."** to save a georeferenced TIFF (4-band).
     *   Click **"Save as JPG + JGW..."** to save a visually-ready 3-band image for reports or simple GIS viewing.
 
 ## Attribution and License

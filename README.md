@@ -1,6 +1,6 @@
 # Sentinel-2 Super-Resolution GUI
 
-A simple, user-friendly desktop application to increase the resolution of Sentinel-2 satellite images.
+A simple, user-friendly desktop application to increase the resolution of Sentinel-2 satellite images. Based on the L1BSR project [https://github.com/centreborelli/L1BSR](https://github.com/centreborelli/L1BSR).
 
 This tool takes the standard 10-meter Blue, Green, Red, and Near-Infrared (NIR) bands and uses a pre-trained AI model to create a higher-resolution, 2x upscaled image. It's designed for users who want to easily enhance their satellite imagery without complex command-line tools.
 

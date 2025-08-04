@@ -4,6 +4,12 @@ A simple, user-friendly desktop application to increase the resolution of Sentin
 
 This tool takes the standard 10-meter Blue, Green, Red, and Near-Infrared (NIR) bands and uses a pre-trained AI model to create a higher-resolution, 2x upscaled image. It's designed for users who want to easily enhance their satellite imagery without complex command-line tools.
 
+## News
+
+- Windows binary for ONNX version created with PyInstaller in Windows 10 [here](https://github.com/Topping1/L1BSR-GUI/releases/download/alpha1/L1-BSR-GUI-ONNX.zip)
+
+## Screenshot
+
 ![Screenshot](screen1%20(Medium).png)
 
 ***
